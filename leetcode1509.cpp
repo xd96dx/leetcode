@@ -17,9 +17,18 @@
 */
 int minDifference(std::vector<int>& nums) {
     int n = nums.size();
-    if (n < 4) { return 0;}
+    // 当nums 长度小于5 时, 改变三个数字, 差值最小一定为0.
+    if (n < 5) { return 0;}
     std::sort(nums.begin(), nums.end());
     int ret = INT_MAX;
+    // 排序后, 在最大的三个和最小的三个中寻找找差值最小的, 即为整个数组差值最小的.
+    /* 
+    [
+        [1,2,2,3]
+        [4,6,7,8]
+    ]
+    在一个有序二维数组中, 同一列求差, 肯定是最小的. 不需要遍历两个数组.
+    */
     for (int i = 0; i < 4; i++) {
         ret = std::min(ret, nums[n - 4 + i] - nums[i]);
     }
