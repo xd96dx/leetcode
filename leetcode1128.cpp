@@ -23,8 +23,3 @@ int question1128(std::vector<std::vector<int>>& dominoes) {
     }
     return ret;
 }
-
-int main() {
-
-    return 0;
-}
