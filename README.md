@@ -1,1 +1,1 @@
-leetcode everyday.
+leetcode when idle.
